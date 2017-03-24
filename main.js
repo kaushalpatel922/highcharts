@@ -44,6 +44,23 @@ $(function() {
             headerFormat: '<span style="font-size:13px">{series.name}</span><br>',
             pointFormat: '<span style="font-size: 13px""color:{point.color}">{point.name}</span>: <b>${point.y:.1f}m</b><br/>'
         },
+        series: [{
+            name: 'Financials',
+            colorByPoint: true,
+            data:[{
+                name:'a',
+                y: 1,
+                drilldown:'#'
+            }, {
+                name: 'b',
+                y: 2,
+                drilldown: '#'
+            }, {
+                name: 'c',
+                y: 3,
+                drilldown: '#'
+            }] 
+        }],
         }
     })
 })
