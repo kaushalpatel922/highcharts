@@ -27,7 +27,7 @@ $(function() {
             },
             gridLineWidth: 0.6,
             maxPadding: 0.1
-        }, 
+        },
         legend: {
             enabled: false
         },
@@ -50,17 +50,36 @@ $(function() {
             data:[{
                 name:'a',
                 y: 1,
-                drilldown:'#'
+                drilldown:'a'
             }, {
                 name: 'b',
                 y: 2,
-                drilldown: '#'
+                drilldown: 'b'
             }, {
                 name: 'c',
                 y: 3,
-                drilldown: '#'
-            }] 
+                drilldown: 'c'
+            }]
         }],
+        drilldown: {
+          series: [{
+            name: 'a',
+            id: 'a',
+            data: [{
+              name: 'a.a',
+              y: 11,
+              drilldown: 'adata'
+            }, {
+              name: 'a.b',
+              y: 12,
+              drilldown: 'bdata'
+            }, {
+              name: 'a.c',
+              y: 13,
+              drilldown: 'cdata'
+            }]
+
+          }]
         }
     })
 })
