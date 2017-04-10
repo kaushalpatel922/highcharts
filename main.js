@@ -1,11 +1,11 @@
 console.log("Hello World!");
 
-$(function() {
+
     //Create the chart
     Highcharts.chart('container', {
         chart: {
             //define the chart type here.
-            type:''
+            type:'column'
         },
         title: {
             text: 'Chart Analysis'
@@ -48,38 +48,45 @@ $(function() {
             name: 'Financials',
             colorByPoint: true,
             data:[{
-                name:'a',
-                y: 1,
-                drilldown:'a'
+                name: '2016',
+                y: 50,
+                drilldown: '2016'
             }, {
-                name: 'b',
-                y: 2,
-                drilldown: 'b'
+                name: '2015',
+                y: 65,
+                drilldown: '2015'
             }, {
-                name: 'c',
-                y: 3,
-                drilldown: 'c'
+                name: '2014',
+                y: 89,
+                drilldown: '2014'
             }]
         }],
         drilldown: {
           series: [{
-            name: 'a',
-            id: 'a',
+            name: '2016',
+            id: '2016',
             data: [{
-              name: 'a.a',
+              name: '6a',
               y: 11,
-              drilldown: 'adata'
+              drilldown: '6a'
             }, {
-              name: 'a.b',
+              name: '6b',
               y: 12,
-              drilldown: 'bdata'
+              drilldown: '6b'
             }, {
-              name: 'a.c',
+              name: '6c',
               y: 13,
-              drilldown: 'cdata'
+              drilldown: '6c'
             }]
-
+          }, {
+            name: '6a',
+            id: '6a',
+            data: [
+              ['2016', 58],
+              ['2015', 62],
+              ['2014', 45],
+              ['2013', 39]
+            ]
           }]
         }
     })
-})
